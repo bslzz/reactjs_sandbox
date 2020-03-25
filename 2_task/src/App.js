@@ -7,7 +7,9 @@ const App = () => {
     <div>
       <h1> Hello World</h1>
       <p> Hello Everyone</p>
-      <Person />
+      <Person name="Bishal" gender="male" />
+      <Person name="Eerika" gender="female" />
+      <Person name="Alex" gender="male" />
     </div>
   );
 };
