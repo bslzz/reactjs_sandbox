@@ -1,0 +1,9 @@
+.header {
+  text-transform: uppercase;
+  background: #333;
+  color: #fff;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-shadow: 0 10px 20px #333;
+}
