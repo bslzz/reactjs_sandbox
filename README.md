@@ -2,4 +2,4 @@
 
 This is a school project for learning React.
 
-<img src = "/public/React_Task3.png">
+![screenshot React task3](/3_task/public/React_Task3.png)
