@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './App.css';
 import Form from './Form/Form';
+import View from './View/View';
 
 class App extends Component {
   render() {
@@ -12,7 +13,9 @@ class App extends Component {
         <main>
           <Form />
         </main>
-        <div></div>
+        <div>
+          <View />
+        </div>
       </div>
     );
   }
