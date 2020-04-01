@@ -6,13 +6,14 @@ import View from './View/View';
 class App extends Component {
   render() {
     return (
-      <div>
-        <header>
-          <h1>Contact me</h1>
-        </header>
+      <div className="myform">
         <main>
+          <header>
+            <h1>Contact me</h1>
+          </header>
           <Form />
         </main>
+
         <div>
           <View />
         </div>

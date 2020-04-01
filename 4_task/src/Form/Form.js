@@ -1,27 +1,57 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Form.css';
 
-const Form = () => {
-  return (
-    <form>
-      <label htmlFor="fname">
-        First name
-        <input type="text" name="fname" />
-      </label>
-      <label htmlFor="lname">
-        Last name
-        <input type="text" name="lname" />
-      </label>
-      <label htmlFor="number">
-        Phone number
-        <input type="number" name="number" />
-      </label>
-      <label htmlFor="message">
-        Message
-        <textarea name="message" id="msg"></textarea>
-      </label>
-    </form>
-  );
-};
+class Form extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      firstname: '',
+      lastname: '',
+      phone: '',
+      message: ''
+    };
+  }
+  changeHandler = event => {
+    this.setState({ [event.target.name]: event.target.value });
+  };
+
+  render() {
+    return (
+      <form>
+        <label htmlFor="fname">First name</label>
+        <input
+          type="text"
+          value={this.state.firstname}
+          name="firstname"
+          onChange={this.changeHandler}
+        />{' '}
+        <br />
+        <label htmlFor="lname">Last name</label>
+        <input
+          type="text"
+          value={this.state.lastname}
+          name="lastname"
+          onChange={this.changeHandler}
+        />{' '}
+        <br />
+        <label htmlFor="number">Phone number</label>
+        <input
+          type="number"
+          value={this.state.phone}
+          name="phone"
+          onChange={this.changeHandler}
+        />{' '}
+        <br />
+        <label htmlFor="message">Message</label>
+        <textarea
+          name="message"
+          value={this.state.message}
+          onChange={this.changeHandler}
+        ></textarea>
+      </form>
+    );
+  }
+}
 
 export default Form;
