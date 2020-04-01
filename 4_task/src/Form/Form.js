@@ -4,14 +4,22 @@ import './Form.css';
 const Form = () => {
   return (
     <form>
-      <label htmlFor="fname">First Name</label>
-      <input type="text" />
-      <label htmlFor="lname">Last Name</label>
-      <input type="text" />
-      <label htmlFor="number">Phone number</label>
-      <input type="number" />
-      <label htmlFor="message">Message</label>
-      <textarea name="message" id="msg" cols="30" rows="10"></textarea>
+      <label htmlFor="fname">
+        First name
+        <input type="text" name="fname" />
+      </label>
+      <label htmlFor="lname">
+        Last name
+        <input type="text" name="lname" />
+      </label>
+      <label htmlFor="number">
+        Phone number
+        <input type="number" name="number" />
+      </label>
+      <label htmlFor="message">
+        Message
+        <textarea name="message" id="msg"></textarea>
+      </label>
     </form>
   );
 };

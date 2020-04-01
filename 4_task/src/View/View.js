@@ -1,18 +1,17 @@
 import React from 'react';
 import './View.css';
 
-const View = () => {
+const View = props => {
   return (
     <div className="viewbox">
       <header>
         <h1>This is your input box</h1>
       </header>
       <div className="inputbox">
-        First Name <input type="text" placeholder="First Name" />
-        Last Name <input type="text" placeholder="Last Name" />
-        Phone Number <input type="number" placeholder="Phone number" />
-        Message{' '}
-        <textarea name="message" id="mesg" cols="30" rows="10"></textarea>
+        First Name: <p> {props.fname}</p>
+        Last Name: <p> {props.lname}</p>
+        Phone Number: <p> {props.number}</p>
+        Message: <textarea>{props.msg}</textarea>
       </div>
     </div>
   );
