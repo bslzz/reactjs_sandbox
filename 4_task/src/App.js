@@ -4,6 +4,12 @@ import Form from './Form/Form';
 import View from './View/View';
 
 class App extends Component {
+  state = {
+    firstname: '',
+    lastname: '',
+    phone: '',
+    message: ''
+  };
   render() {
     return (
       <div className="myform">
@@ -11,7 +17,7 @@ class App extends Component {
           <header>
             <h1>Contact me</h1>
           </header>
-          <Form />
+          <Form value={this.state.firstname} />
         </main>
 
         <div>

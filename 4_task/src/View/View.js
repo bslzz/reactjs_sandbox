@@ -1,22 +1,21 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './View.css';
 
-class View extends Component {
-  render() {
-    return (
-      <div className="viewbox">
-        <h1>This is your input box</h1>
-        <form className="form">
-          <input type="text" placeholder="First Name" />
-          <br />
-          <input type="text" placeholder="Last Name" />
-          <br />
-          <input type="number" placeholder="Phone number" /> <br />
-          <textarea placeholder="Message"></textarea>
-        </form>
+const View = props => {
+  return (
+    <div className="viewbox">
+      <h1>This is your input box</h1>
+      <div className="inputbox">
+        <p>First Name: {props.firstname}</p>
+
+        <p>Last Name: {props.lastname}</p>
+
+        <p>Phone number: {props.phone}</p>
+
+        <p>Message: {props.message}</p>
       </div>
-    );
-  }
-}
+    </div>
+  );
+};
 
 export default View;
