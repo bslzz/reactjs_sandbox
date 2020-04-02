@@ -6,8 +6,8 @@
   align-items: center;
   padding: 0 2rem;
   background-image: linear-gradient(
-      rgba(100, 20, 60, 0.6),
-      rgba(100, 10, 90, 0.4)
+      rgba(10, 20, 30, 0.6),
+      rgba(90, 10, 40, 0.4)
     ),
     url('https://images.unsplash.com/photo-1451850001250-71006b05a6ac?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1835&q=80');
   background-repeat: no-repeat;
