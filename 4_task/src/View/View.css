@@ -11,7 +11,6 @@ body {
 .viewbox {
   height: 100%;
   width: 100%;
-  border: 2px solid yellow;
 }
 .viewbox h1 {
   padding: 0 2rem;

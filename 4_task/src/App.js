@@ -8,7 +8,7 @@ class App extends Component {
     firstname: '',
     lastname: '',
     phone: '',
-    message: ''
+    message: '',
   };
   render() {
     return (
@@ -17,7 +17,7 @@ class App extends Component {
           <header>
             <h1>Contact me</h1>
           </header>
-          <Form value={this.state.firstname} />
+          <Form />
         </main>
 
         <div>
