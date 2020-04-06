@@ -16,6 +16,7 @@ button {
     url('https://images.unsplash.com/photo-1563297007-0686b7003af7?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1391&q=80');
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
 }
 
 .header h1 {
@@ -24,12 +25,9 @@ button {
   text-transform: uppercase;
   color: cyan;
 }
-.header input {
-  padding: 1rem;
-  width: 100%;
-  font-size: 1em;
-  outline: none;
-  border-radius: 10px;
+.header p {
+  font-size: 1.5em;
+  color: #fff;
 }
 
 button {
@@ -39,5 +37,9 @@ button {
   border-radius: 5px;
   outline: none;
   font-size: 1em;
+  font-weight: 600;
   color: red;
+  box-shadow: inset -3px -3px 3px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.4),
+    -15px -15px 25px rgba(255, 255, 255, 0.2), 15px 15px 5px rgba(0, 0, 0, 0.2);
 }
