@@ -1,12 +1,19 @@
 .circle {
-  height: 200px;
-  width: 200px;
+  height: 220px;
+  width: 220px;
   border-radius: 50%;
   display: inline-block;
   margin: 0 20px;
-  background: rgb(189, 185, 185);
-  box-shadow: inset -5px -5px -5px rgba(255, 255, 255, 0.9),
-    inset 5px 5px 5px rgba(0, 0, 0, 0.1),
-    -15px -15px -15px rgba(255, 255, 255, 0.3);
+  box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.1),
+    inset 5px 5px 5px rgba(0, 0, 0, 0.4),
+    -15px -15px 15px rgba(255, 255, 255, 0.1), 15px 15px 15px rgba(0, 0, 0, 0.2);
+
   cursor: pointer;
+}
+
+.circle.active {
+  background-image: url(emoji.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: none;
 }
