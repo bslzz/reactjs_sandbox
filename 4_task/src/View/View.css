@@ -2,6 +2,9 @@
   height: 100%;
   width: 100%;
 }
-.viewbox h1 {
-  padding: 0 2rem;
+
+.inputbox p {
+  border-bottom: 1px solid #333;
+  font-size: 1.3em;
+  font-weight: 600;
 }
