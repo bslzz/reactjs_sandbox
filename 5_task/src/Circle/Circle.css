@@ -1,3 +1,7 @@
+* {
+  cursor: url('http://cur.cursors-4u.net/holidays/hol-6/hol505.cur'), auto !important;
+}
+
 .circle {
   height: 220px;
   width: 220px;
@@ -7,13 +11,12 @@
   box-shadow: inset -5px -5px 10px rgba(255, 255, 255, 0.1),
     inset 5px 5px 5px rgba(0, 0, 0, 0.4),
     -15px -15px 15px rgba(255, 255, 255, 0.1), 15px 15px 15px rgba(0, 0, 0, 0.2);
-
-  cursor: pointer;
 }
 
 .circle.active {
-  background-image: url(emoji.png);
+  /* background-image: url(emoji.png); */
+  background: url('https://media.giphy.com/media/ra75UYT9LjKSY/giphy.gif');
+  background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  box-shadow: none;
 }

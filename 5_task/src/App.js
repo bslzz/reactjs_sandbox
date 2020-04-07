@@ -12,7 +12,7 @@ class App extends Component {
     current: 0,
   };
 
-  circleSpeed = 1500;
+  circleSpeed = 1200;
   timer = undefined;
 
   //Finding the next random circle
@@ -48,8 +48,10 @@ class App extends Component {
     return (
       <div className="mygame">
         <div className="header">
-          <h1>Speedtest Game</h1>
-          <p>Your score: {this.state.score}</p>
+          <h1>how fast are you?</h1>
+          <div className="score">
+            Score: <div className="scorecard">{this.state.score}</div>
+          </div>
         </div>
         <main>
           <Circle
