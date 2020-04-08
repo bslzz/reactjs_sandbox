@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap');
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: rgba(5, 10, 15, 0.349);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupbox {
+  font-family: 'MedievalSharp', cursive;
+  min-height: 50px;
+  min-width: 500px;
+  box-shadow: 12px 20px 65px rgba(8, 6, 6, 0.9),
+    inset 20px 2px 65px rgba(7, 6, 6, 0.9);
+  background: rgba(42, 107, 109, 0.514);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  color: #fff;
+  border-radius: 10px;
+}
+.popupbox h2 {
+  margin-top: 2rem;
+  font-size: 3em;
+  text-transform: uppercase;
+}
+.popupbox h3 {
+  margin: 2rem 0;
+
+  font-size: 5em;
+  text-transform: uppercase;
+  color: rgb(255, 238, 0);
+}
+
+.fas {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 30px;
+  color: #fff;
+  cursor: pointer;
+}
+
+img {
+  height: 150px;
+  position: absolute;
+  top: 40%;
+  left: 31%;
+}
