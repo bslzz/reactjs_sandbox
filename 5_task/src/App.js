@@ -52,6 +52,7 @@ class App extends Component {
       this.endHandler();
       return;
     }
+
     audio.play();
 
     this.setState({ score: this.state.score + 1, rounds: 0 });
@@ -62,6 +63,9 @@ class App extends Component {
   };
   endHandler = () => {
     clearTimeout(this.timer);
+    let audio = new Audio('/gameover.wav');
+    audio.play();
+
     this.setState({
       gameOverBox: true,
     });
