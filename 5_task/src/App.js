@@ -12,14 +12,21 @@ class App extends Component {
     score: 0,
     current: 0,
     gameOverBox: false,
+    rounds: 0,
   };
 
-  circleSpeed = 1200;
+  //speed and timer settings
+
+  circleSpeed = 2000;
   timer = undefined;
 
   //Finding the next random circle
 
   next = () => {
+    if (this.state.rounds >= 5) {
+      this.endHandler();
+    }
+
     let nextActive = undefined;
     do {
       nextActive = getRndInteger(1, 4);
@@ -27,7 +34,10 @@ class App extends Component {
 
     this.setState({
       current: nextActive,
+      rounds: this.state.rounds + 1,
     });
+
+    this.circleSpeed *= 0.96;
     this.timer = setTimeout(this.next, this.circleSpeed);
     console.log(this.state.current);
   };
@@ -35,8 +45,16 @@ class App extends Component {
   //finding a random number
 
   clickHandler = (circleNumber) => {
+    let audio = new Audio('/gunshot.mp3');
     console.log('Clicked', circleNumber);
-    this.setState({ score: this.state.score + 1 });
+
+    if (this.state.current !== circleNumber) {
+      this.endHandler();
+      return;
+    }
+    audio.play();
+
+    this.setState({ score: this.state.score + 1, rounds: 0 });
   };
 
   startHandler = () => {
