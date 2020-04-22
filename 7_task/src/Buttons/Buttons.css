@@ -1,0 +1,10 @@
+button {
+  margin: 1rem;
+  padding: 8px 16px;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 16px;
+  cursor: pointer;
+  display: inline-block;
+}
