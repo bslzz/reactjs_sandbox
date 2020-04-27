@@ -1,13 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import App from './App';
+import Simplerouting from './Simplerouting';
+import Nestedrouting from './nestedrouting';
 
-
-ReactDOM.render(
- 
-    <App />
-  ,
-  document.getElementById('root')
-);
-
+ReactDOM.render(<Simplerouting />, document.getElementById('root'));
