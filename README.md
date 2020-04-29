@@ -17,5 +17,11 @@ Task -4
 Task -5
 ![screenshot React task5](/5_task/public/React-Speedtester-game.png)
 
+Task -6
+![screenshot React task6](/6_task/public/React-postcards-props&components.png)
+
+Task -7
+![screenshot React task7](/7_task/public/React-hooks.png)
+
 Task -8
 ![screenshot React task8](/8_task/public/React-Route-Bootstrap.png)
