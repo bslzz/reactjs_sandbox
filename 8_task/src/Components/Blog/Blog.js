@@ -1,5 +1,5 @@
 import React from 'react';
-import { CardColumns, Card, Container } from 'react-bootstrap';
+import { CardGroup, Card, Container } from 'react-bootstrap';
 import { Switch, useRouteMatch, Route, Link } from 'react-router-dom';
 import './Blog.css';
 import Postdata from '../../Postdata';
@@ -12,7 +12,14 @@ const Blog = () => {
   const blogList = post.map((post) => {
     return (
       <Container>
-        <CardColumns className="d-inline-block" style={{ marginTop: '1rem' }}>
+        <CardGroup
+          style={{
+            marginTop: '20px',
+            marginRight: '10px',
+            display: 'inline-block',
+            width: '25%',
+          }}
+        >
           <Card className="cardPosts" key={post.id} border="secondary">
             <Card.Img variant="top" src={post.image} />
             <Card.Body>
@@ -24,7 +31,7 @@ const Blog = () => {
               </Link>
             </Card.Body>
           </Card>
-        </CardColumns>
+        </CardGroup>
       </Container>
     );
   });
