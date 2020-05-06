@@ -1,6 +1,6 @@
 .cardPosts {
-  box-shadow: 1px 1px 1px;
+  box-shadow: 0 0 1px;
 }
 .cardPosts:hover {
-  box-shadow: 2px 2px 1px;
+  box-shadow: 0 0 6px;
 }
