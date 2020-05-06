@@ -1,21 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 import PostCard from '../PostCard/PostCard';
 import { Switch, Route, useRouteMatch } from 'react-router-dom';
 
-import postdata from '../../postdata';
 import FullPost from '../FullPost/FullPost';
 
 const Blog = () => {
+  const [post, setPost] = useState([]);
   let match = useRouteMatch();
 
-  const PostList = postdata.map((p) => {
+  useEffect(() => {
+    axios.get('https://jsonplaceholder.typicode.com/photos').then((resp) => {
+      const posts = resp.data.slice(0, 10);
+      setPost(posts);
+      console.log(posts);
+    });
+  }, []);
+
+  const PostList = post.map((p) => {
     return (
       <PostCard
         key={p.id}
         title={p.title}
         desc={p.desc}
-        img={p.img}
+        img={p.thumbnailUrl}
         link={`${match.url}/${p.id}`}
       />
     );
