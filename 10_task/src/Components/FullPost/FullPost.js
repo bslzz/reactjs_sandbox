@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useParams } from 'react-router-dom';
 import './FullPost.css';
 import axios from 'axios';
@@ -9,25 +9,26 @@ const FullPost = () => {
 
   useEffect(() => {
     if (!loadedPost) {
-      axios
-        .get('https://jsonplaceholder.typicode.com/photos/' + postId)
-        .then((resp) => {
-          console.log(resp.data);
-          setLoadedPost(resp.data);
-        });
+      axios.get('http://localhost:3001/posts/' + postId).then((response) => {
+        console.log(response.data);
+        setLoadedPost(response.data);
+      });
     }
   });
 
   let postData = undefined;
+
   if (postId) {
-    postData = <h1>Loading Post...</h1>;
+    postData = <h1>Loading post</h1>;
   }
+
   if (loadedPost) {
     postData = (
       <div className="fullPost">
+        <img src={loadedPost.img} alt={loadedPost.title} />
         <h1>Post {loadedPost.id}</h1>
         <p>{loadedPost.title}</p>
-        <img src={loadedPost.thumbnailUrl} alt={loadedPost.title} />
+        <p>{loadedPost.desc}</p>
       </div>
     );
   }

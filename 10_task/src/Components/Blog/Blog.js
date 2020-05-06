@@ -11,12 +11,23 @@ const Blog = () => {
   let match = useRouteMatch();
 
   useEffect(() => {
-    axios.get('https://jsonplaceholder.typicode.com/photos').then((resp) => {
-      const posts = resp.data.slice(0, 10);
-      setPost(posts);
-      console.log(posts);
+    axios.get('http://localhost:3001/posts/').then((response) => {
+      setPost(response.data);
     });
   }, []);
+
+  const removeHandler = (id) => {
+    console.log(id);
+
+    axios
+      .delete('http://localhost:3001/posts/' + id)
+      .then(() => {
+        return axios.get('http://localhost:3001/posts');
+      })
+      .then((response) => {
+        setPost(response.data);
+      });
+  };
 
   const PostList = post.map((p) => {
     return (
@@ -24,8 +35,10 @@ const Blog = () => {
         key={p.id}
         title={p.title}
         desc={p.desc}
-        img={p.thumbnailUrl}
+        author={p.author}
+        img={p.img}
         link={`${match.url}/${p.id}`}
+        remove={() => removeHandler(p.id)}
       />
     );
   });
