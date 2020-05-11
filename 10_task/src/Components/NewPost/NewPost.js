@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import './NewPost.css';
 import axios from 'axios';
+import { Button } from 'react-bootstrap';
 
 const NewPost = () => {
-  const [newPost, setNewPost] = useState({
+  let [newPost, setNewPost] = useState({
     title: '',
     desc: '',
     img: '',
@@ -26,8 +27,8 @@ const NewPost = () => {
 
   return (
     <>
-      <h1>Add new post</h1>
       <form className="newPost">
+        <h1>Add new post</h1>
         <div>
           <label htmlFor="title">Title</label>
           <input
@@ -55,9 +56,9 @@ const NewPost = () => {
             onChange={changeValueHandler}
           />
         </div>
-        <button onClick={addPostHandler} type="submit">
+        <Button onClick={addPostHandler} type="submit">
           Add new post
-        </button>
+        </Button>
       </form>
     </>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 
 import './PostCard.css';
 import { Link } from 'react-router-dom';
+import { Button } from 'react-bootstrap';
 
 const PostCard = ({ title, img, desc, link, author, remove }) => {
   return (
@@ -11,8 +12,12 @@ const PostCard = ({ title, img, desc, link, author, remove }) => {
       <h2>{author}</h2>
       <p>{desc}</p>
 
-      <Link to={link}>Read more</Link>
-      <button onClick={remove}>Remove this post</button>
+      <Link className="link" to={link}>
+        Read more..
+      </Link>
+      <Button className="button" onClick={remove}>
+        Remove this post
+      </Button>
     </div>
   );
 };

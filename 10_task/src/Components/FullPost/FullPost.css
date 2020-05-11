@@ -1,3 +1,17 @@
 .fullPost img {
-  width: 200px;
+  width: 90%;
+  height: 600px;
+}
+.fullPost {
+  padding: 1rem;
+}
+
+.fullPost h1 {
+  margin-top: 1rem;
+}
+
+.fullPost p {
+  font-size: 1.2rem;
+
+  padding: 0;
 }

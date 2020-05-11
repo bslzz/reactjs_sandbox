@@ -50,7 +50,7 @@ const Blog = () => {
           <FullPost />
         </Route>
         <Route path={match.path}>
-          <div>
+          <div className="blog">
             <h1>Blog</h1>
             {PostList}
           </div>

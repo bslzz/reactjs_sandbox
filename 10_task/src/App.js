@@ -1,21 +1,28 @@
 import React from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import './App.css';
 
-import Nav from './Components/Nav/Nav';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
+import NavHeader from './Components/Nav/Nav';
 import Home from './Components/Home/Home';
 import Blog from './Components/Blog/Blog';
 import NewPost from './Components/NewPost/NewPost';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <Router>
-      <Nav />
-      <Switch>
-        <Route path="/" exact component={Home} />
-        <Route path="/blog" component={Blog} />
-        <Route path="/newpost" component={NewPost} />
-      </Switch>
-    </Router>
+    <div className="final-content">
+      <Router>
+        <Container>
+          <NavHeader />
+          <Switch>
+            <Route path="/" exact component={Home} />
+            <Route path="/blog" component={Blog} />
+            <Route path="/newpost" component={NewPost} />
+          </Switch>
+        </Container>
+      </Router>
+    </div>
   );
 };
 
