@@ -1,14 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Squada+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display+SC:wght@900&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-.home h1 {
+.maintitle {
   display: grid;
   place-items: center;
-  height: 80vh;
+}
+.title h1 {
+  font-size: 4.5rem;
+  color: #e9e9e9;
+  font-family: 'Squada One', cursive;
+  padding: 3rem 0 0 1rem;
+}
+
+.image img {
+  height: 470px;
+  width: 490px;
+  padding: 2rem 3rem 0 0;
 }
 
 .blog {
@@ -17,10 +31,12 @@
 .blog h1 {
   margin: 0 0 2rem 0;
   text-align: center;
+  color: #e9e9e9;
+  font-size: 3rem;
 }
 
 .final-content {
-  background: #7de4ec;
+  background: #222930;
   min-height: 100vh;
   font-family: 'Josefin Sans', sans-serif;
 }
@@ -33,4 +49,12 @@
 .links {
   font-size: 1.3rem;
   font-weight: 700;
+}
+
+.contactForm {
+  padding: 2rem 1rem;
+  margin: 2rem 0;
+  font-size: 1.4rem;
+  width: 60%;
+  color: #4eb1ba;
 }

@@ -25,3 +25,10 @@ Task -7
 
 Task -8
 ![screenshot React task8](/8_task/public/React-Route-Bootstrap.png)
+
+Task -9
+![screenshot React task9](/9_task/public/React-task-9.png)
+
+
+Task -10
+![screenshot React task10](/10_task/public/React-task10.png)

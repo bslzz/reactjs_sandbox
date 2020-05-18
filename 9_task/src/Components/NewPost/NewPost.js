@@ -4,9 +4,10 @@ import axios from 'axios';
 import { Button } from 'react-bootstrap';
 
 const NewPost = () => {
-  let [newPost, setNewPost] = useState({
+  const [newPost, setNewPost] = useState({
     title: '',
     desc: '',
+    author: '',
     img: '',
   });
 
@@ -21,6 +22,8 @@ const NewPost = () => {
     e.preventDefault();
 
     axios.post('http://localhost:3001/posts', newPost).then((response) => {
+      alert('New Post Added Successfully');
+
       console.log(response.data);
     });
   };
@@ -29,6 +32,7 @@ const NewPost = () => {
     <>
       <form className="newPost">
         <h1>Add new post</h1>
+
         <div>
           <label htmlFor="title">Title</label>
           <input
@@ -36,6 +40,7 @@ const NewPost = () => {
             name="title"
             id="title"
             onChange={changeValueHandler}
+            autoComplete="off"
           />
         </div>
         <div>
@@ -45,6 +50,7 @@ const NewPost = () => {
             name="author"
             id="author"
             onChange={changeValueHandler}
+            autoComplete="off"
           />
         </div>
         <div>
@@ -54,6 +60,7 @@ const NewPost = () => {
             name="desc"
             id="desc"
             onChange={changeValueHandler}
+            autoComplete="off"
           />
         </div>
         <div>
@@ -65,9 +72,10 @@ const NewPost = () => {
             name="img"
             id="img"
             onChange={changeValueHandler}
+            autoComplete="off"
           />
         </div>
-        <Button onClick={addPostHandler} type="submit">
+        <Button className="button" onClick={addPostHandler} type="submit">
           Add new post
         </Button>
       </form>

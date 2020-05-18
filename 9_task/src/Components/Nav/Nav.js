@@ -5,20 +5,33 @@ import { Nav, Navbar } from 'react-bootstrap';
 const NavHeader = () => {
   return (
     <Navbar collapseOnSelect expand="lg" className="navbar nav">
-      <Link to="/" className="navbar-brand brand brandName">
+      <Link
+        to="/"
+        style={{ color: '#4EB1BA', fontFamily: 'Playfair Display SC' }}
+        className="navbar-brand brand brandName"
+      >
         Bishal Aryal
       </Link>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+      <Navbar.Toggle
+        style={{ color: '#4EB1BA' }}
+        aria-controls="responsive-navbar-nav"
+      />
       <Navbar.Collapse id="responsive-navbar-nav">
         <Nav className="ml-auto links">
-          <Link to="/" className="nav-link">
+          <Link style={{ color: '#4EB1BA' }} to="/" className="nav-link">
             Home
           </Link>
-          <Link to="/blog" className="nav-link">
+          <Link to="/about" style={{ color: '#4EB1BA' }} className="nav-link">
+            About
+          </Link>
+          <Link to="/blog" style={{ color: '#4EB1BA' }} className="nav-link">
             Blog
           </Link>
-          <Link to="/newpost" className="nav-link">
+          <Link to="/newpost" style={{ color: '#4EB1BA' }} className="nav-link">
             New Post
+          </Link>
+          <Link to="/contact" style={{ color: '#4EB1BA' }} className="nav-link">
+            Contact
           </Link>
         </Nav>
       </Navbar.Collapse>
