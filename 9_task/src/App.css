@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.home h1 {
+  display: grid;
+  place-items: center;
+  height: 80vh;
+}
+
+.blog {
+  padding: 1rem;
+}
+.blog h1 {
+  margin: 0 0 2rem 0;
+  text-align: center;
+}
+
+.final-content {
+  background: #7de4ec;
+  min-height: 100vh;
+  font-family: 'Josefin Sans', sans-serif;
+}
+
+.brand.brandName {
+  font-size: 2.2rem;
+  font-weight: 700;
+}
+
+.links {
+  font-size: 1.3rem;
+  font-weight: 700;
+}
