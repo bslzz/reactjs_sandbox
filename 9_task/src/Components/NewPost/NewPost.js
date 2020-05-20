@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import './NewPost.css';
 import axios from 'axios';
 import { Button } from 'react-bootstrap';
+import { useHistory } from 'react-router-dom';
 
 const NewPost = () => {
   const [newPost, setNewPost] = useState({
@@ -17,13 +18,13 @@ const NewPost = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  let history = useHistory();
   const addPostHandler = (e) => {
     e.preventDefault();
 
     axios.post('http://localhost:3001/posts', newPost).then((response) => {
       alert('New Post Added Successfully');
-
+      history.push('/blog');
       console.log(response.data);
     });
   };
