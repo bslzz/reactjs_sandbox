@@ -16,7 +16,7 @@ const Contact = () => {
         </Form.Group>
 
         <Form.Group controlId="exampleForm.ControlTextarea1">
-          <Form.Label>Example textarea</Form.Label>
+          <Form.Label>Message</Form.Label>
           <Form.Control as="textarea" rows="3" />
         </Form.Group>
         <Button variant="primary" type="submit">
