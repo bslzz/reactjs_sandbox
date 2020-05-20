@@ -8,6 +8,7 @@
 .newPost div,
 .newPost h1 {
   margin-bottom: 2rem;
+  color: #fff;
 }
 
 .newPost label {
